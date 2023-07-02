@@ -2,12 +2,12 @@ import React from 'react';
 
 const Resume = () => {
   return (
-    <div className="resume">
-      <h2>Resume</h2>
-      <h3>Professional Experience</h3>
+    <div className ="resume">
+      <h2 className = 'h2'>Resume</h2>
+      <h3 className = 'h3'>Professional Experience</h3>
       <ul>
         <li>
-          <h4>Job Title</h4>
+          <h4 className = 'h4'>Job Title</h4>
           <p>Company Name | Location | Start Date - End Date</p>
           <ul>
             <li>Responsibility 1</li>

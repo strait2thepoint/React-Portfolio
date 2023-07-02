@@ -1,0 +1,10 @@
+.resume {
+    color: purple;
+    background-color: rgb(122, 89, 245);
+}
+
+.h2, h3, h4 {
+    color: #1f0133;
+    font-size: 24px;
+    font-weight: bold;
+}
