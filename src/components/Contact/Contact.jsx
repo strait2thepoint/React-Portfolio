@@ -5,16 +5,53 @@ function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [messageError, setMessageError] = useState('');
+
+  const validateForm = () => {
+    let isValid = true;
+
+    // Validate name field
+    if (name.trim() === '') {
+      setNameError('Name is required');
+      isValid = false;
+    } else {
+      setNameError('');
+    }
+
+    // Validate email field
+    if (email.trim() === '') {
+      setEmailError('Email is required');
+      isValid = false;
+    } else {
+      setEmailError('');
+    }
+
+    // Validate message field
+    if (message.trim() === '') {
+      setMessageError('Message is required');
+      isValid = false;
+    } else {
+      setMessageError('');
+    }
+
+    return isValid;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    // You can access the form values using the state variables (name, email, message)
-    console.log('Form submitted:', { name, email, message });
-    // Reset the form after submission
-    setName('');
-    setEmail('');
-    setMessage('');
+
+    // Validate the form before submitting
+    if (validateForm()) {
+      // Form is valid, handle form submission logic here
+      console.log('Form submitted:', { name, email, message });
+
+      // Reset form fields
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
   };
 
   return (
@@ -39,7 +76,15 @@ function Contact() {
             id="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            onBlur={() => {
+              if (name.trim() === '') {
+                setNameError('Name is required');
+              } else {
+                setNameError('');
+              }
+            }}
           />
+          {nameError && <span className="error">{nameError}</span>}
         </div>
         <div>
           <label htmlFor="email">Email:</label>
@@ -48,7 +93,15 @@ function Contact() {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            onBlur={() => {
+              if (email.trim() === '') {
+                setEmailError('Email is required');
+              } else {
+                setEmailError('');
+              }
+            }}
           />
+          {emailError && <span className="error">{emailError}</span>}
         </div>
         <div>
           <label htmlFor="message">Message:</label>
@@ -56,7 +109,15 @@ function Contact() {
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            onBlur={() => {
+              if (message.trim() === '') {
+                setMessageError('Message is required');
+              } else {
+                setMessageError('');
+              }
+            }}
           ></textarea>
+          {messageError && <span className="error">{messageError}</span>}
         </div>
         <button type="submit">Submit</button>
       </form>
