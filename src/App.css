@@ -1,13 +1,34 @@
-body{
+body {
     color: rgb(78, 5, 78);
-    background-color: rgb(208, 196, 252);}
+    background-color: rgb(208, 196, 252);
+}
+
+.header {
+    background: linear-gradient(to right, #000027, navy, purple, violet, rgb(250, 224, 250));
+}
+
+.name{
+    color:antiquewhite;
+    font-size: 48px;
+    padding-left: 40%;
+}
+
+.list{
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:antiquewhite;
+    padding-left: 40%;
+    padding-bottom: 50px;
+}
 
 .app {
     color: purple;
     background-color: rgb(208, 196, 252);
 }
 
-.h1, h2, h3, h4 {
+.h2,
+h3,
+h4 {
     color: #1f0133;
     font-weight: bold;
 }
