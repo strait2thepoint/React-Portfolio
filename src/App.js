@@ -4,6 +4,8 @@ import AboutMe from './components/AboutMe/AboutMe';
 import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects';
 import Portfolio from './components/Portfolio/Portfolio';
+import Resume from './components/Resume/Resume';
+
 import './App.css'
 
 function Footer() {
@@ -33,6 +35,9 @@ function App() {
               <li>
               <Link to="/about-me">About Me</Link>
             </li>
+            <li>
+              <Link to="/resume">Resume</Link>
+            </li>
             
           </ul>
         </nav>
@@ -43,6 +48,7 @@ function App() {
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </div>
 
