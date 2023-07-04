@@ -1,5 +1,5 @@
 body {
-    color: rgb(78, 5, 78);
+    color: #4e054e;
     background-color: rgb(208, 196, 252);
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 .app {
-    color: purple;
+    color: antiquewhite;
     background-color: rgb(208, 196, 252);
 }
 

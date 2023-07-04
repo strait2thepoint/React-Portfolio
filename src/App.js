@@ -5,15 +5,16 @@ import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects';
 import Portfolio from './components/Portfolio/Portfolio';
 import Resume from './components/Resume/Resume';
-
+import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
 
 function Header() {
   return (
     <header className="header">
-      <h1 className='name'>Laura Strait</h1>
-      <nav>
-        <ul className='list'>
+      <h1 className='name'>Laura J. Strait</h1>
+      <nav className='list'>
+        <ul >
           <li>
             <Link to="/portfolio">Portfolio</Link>
           </li>
@@ -35,13 +36,34 @@ function Header() {
   );
 }
 
+function SocialLinks() {
+  return (
+    <div className="social-links">
+      <a href="https://github.com/strait2thepoint">
+        <FaGithub />
+      </a>
+      <a href="https://www.linkedin.com/in/strait2thepoint/">
+        <FaLinkedin />
+      </a>
+      <a href="https://twitter.com/SewStrait">
+        <FaTwitter />
+      </a>
+      <a href = "https://www.facebook.com/strait2thepoint">
+      < FaFacebook />
+      </a>
+    </div>
+  );
+}
+
 function Footer() {
   return (
     <div className="footer">
       Made with ❤️ by <a href="https://github.com/strait2thepoint">Strait2thePoint</a>.
+      <SocialLinks />
     </div>
   );
 }
+
 
 function App() {
   return (
