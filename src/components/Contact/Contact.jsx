@@ -43,23 +43,18 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
   
-    // Validate the form before submitting
     if (validateForm()) {
-      // Create the form data object
       const formData = { name, email, message };
-  
-      // Make an HTTP POST request to the server-side route
+  console.log(formData);
       axios.post('/contact', formData)
         .then((response) => {
           console.log('Form submitted successfully');
-          // Reset form fields
           setName('');
           setEmail('');
           setMessage('');
         })
         .catch((error) => {
           console.log('Error submitting form:', error);
-          // Handle error condition if needed
         });
     }
   };

@@ -6,7 +6,7 @@ function Resume() {
     <div className="resume">
       <h2 className="h2">Resume</h2>
       <p>You can download my resume by clicking the link below:</p>
-      <a href="https://docs.google.com/document/d/e/2PACX-1vSwBiCwXLWpNE9uyiix5b_qS5fBVg9JF5gCe8USjA3bUDHKvEgQtof9tpU3bUS6Rw/pub" target="_blank" rel="noopener noreferrer">Download Resume</a>
+      <a href="https://docs.google.com/document/d/e/2PACX-1vSwBiCwXLWpNE9uyiix5b_qS5fBVg9JF5gCe8USjA3bUDHKvEgQtof9tpU3bUS6Rw/pub" download>Download Resume</a>
       
       <h2 className="h2">Proficiencies</h2>
       <ul>
