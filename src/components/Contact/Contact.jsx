@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles/contact.css';
+import axios from 'axios';
 
 function Contact() {
   const [name, setName] = useState('');
@@ -41,16 +42,25 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     // Validate the form before submitting
     if (validateForm()) {
-      // Form is valid, handle form submission logic here
-      console.log('Form submitted:', { name, email, message });
-
-      // Reset form fields
-      setName('');
-      setEmail('');
-      setMessage('');
+      // Create the form data object
+      const formData = { name, email, message };
+  
+      // Make an HTTP POST request to the server-side route
+      axios.post('/contact', formData)
+        .then((response) => {
+          console.log('Form submitted successfully');
+          // Reset form fields
+          setName('');
+          setEmail('');
+          setMessage('');
+        })
+        .catch((error) => {
+          console.log('Error submitting form:', error);
+          // Handle error condition if needed
+        });
     }
   };
 
