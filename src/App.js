@@ -14,21 +14,31 @@ function Header() {
     <header className="header">
       <h1 className='name'>Laura J. Strait</h1>
       <nav className='list'>
-        <ul >
+        <ul className="nav-list">
           <li>
-            <Link to="/portfolio">Portfolio</Link>
+            <button className="nav-button navP">
+              <Link to="/portfolio" style={{ color: 'rgb(238, 188, 258)' }}>Portfolio</Link>
+            </button>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <button className="nav-button navC">
+              <Link to="/contact" style={{ color: 'violet' }}>Contact</Link>
+            </button>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <button className="nav-button navPr">
+              <Link to="/projects" style={{ color: 'white' }}>Projects</Link>
+            </button>
           </li>
           <li>
-            <Link to="/about-me">About Me</Link>
+            <button className="nav-button navA">
+              <Link to="/about-me" style={{ color: 'navy' }}>About Me</Link>
+            </button>
           </li>
           <li>
-            <Link to="/resume">Resume</Link>
+            <button className="nav-button navR">
+              <Link to="/resume" style={{ color: '#000027' }}>Resume</Link>
+            </button>
           </li>
         </ul>
       </nav>
