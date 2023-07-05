@@ -57,9 +57,7 @@ function Contact() {
   return (
     <div className="contact">
       <h2 className="h2">Contact Me</h2>
-      <p>
-        You can reach out to me via email or connect with me on GitHub:
-      </p>
+      <p>You can reach out to me via email or connect with me on GitHub:</p>
       <ul>
         <li>Email: sewstrait@gmail.com</li>
         <li>
@@ -119,7 +117,7 @@ function Contact() {
           ></textarea>
           {messageError && <span className="error">{messageError}</span>}
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className='submit'>Submit</button>
       </form>
     </div>
   );
